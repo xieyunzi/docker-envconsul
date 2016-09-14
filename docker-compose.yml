@@ -1,0 +1,7 @@
+version: '2'
+services:
+  envconsul:
+    image: xieyunzi/docker-envconsul
+    volumes:
+      - ./data:/data
+    command: /bin/envconsul -consul ${CONSUL} ${CMD}
